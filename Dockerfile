@@ -9,4 +9,5 @@ RUN wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flut
 RUN yes | ./tools/bin/sdkmanager --sdk_root=./tools --install "platform-tools" "platforms;android-28" "build-tools;28.0.3"
 RUN yes | ./tools/bin/sdkmanager --sdk_root=./tools --install "platform-tools" "platforms;android-29" "build-tools;29.0.2"
 RUN yes | ./tools/bin/sdkmanager --sdk_root=./tools --licenses
+RUN apt install curl -y
 RUN echo PATH=$PATH:/home/build/tools/bin:/home/build/tools/platform-tools:/home/build/flutter/bin >> /root/.bashrc

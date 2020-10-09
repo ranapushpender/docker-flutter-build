@@ -13,10 +13,12 @@ steps:
           from_secret: DOCKER_USER
       DOCKER_PASSWORD:
           from_secret: DOCKER_PASSWORD
+      TAG_NAME: ${DRONE_TAG}
   commands:
   - sleep 30
   - export DOCKER_USER=$DOCKER_USER
   - export DOCKER_PASSWORD=$DOCKER_PASSWORD
+  - export TAG_NAME=$TAG_NAME
   - ./build_script.sh
 
 services:

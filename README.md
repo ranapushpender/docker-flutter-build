@@ -5,12 +5,11 @@
 ```
 docker pull ranapushpender/docker-flutter-build
 ```
-* Start the container using the following  
-
+* Start the container using the following
 ```
-docker run --name build-container \
+ docker run --name build-container \
             -v /path/to/flutter/project:/home/project \
-            -it ranapushpender/docker-flutter-build bash 
+            -it ranapushpender/docker-flutter-build:latest bash 
 ```
 * Change to your project directory and run 
 ```
@@ -20,3 +19,13 @@ flutter build apk
 ```
 exit
 ```
+
+### Notes
+* Builds tagged with "latest " denote the latest tagged build on github
+* Builds for all tags on github are tagged with their respective versions
+```
+ranapushpender/docker-flutter-build:version
+```
+
+### Source
+* [Github](https://github.com/ranapushpender/docker-flutter-build)

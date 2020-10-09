@@ -1,5 +1,5 @@
 # Docker Flutter Build
-[![Build Status](https://drone.stackweb.net:2053/api/badges/ranapushpender/docker-flutter-build/status.svg)](https://drone.stackweb.net:2053/ranapushpender/docker-flutter-build)
+[![Build Status](https://drone.stackweb.net/api/badges/ranapushpender/docker-flutter-build/status.svg)](https://drone.stackweb.net:2053/ranapushpender/docker-flutter-build)
 ### Usage
 * Pull the latest docker image using 
 ```

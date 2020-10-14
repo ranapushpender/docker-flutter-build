@@ -1,5 +1,9 @@
 # Docker Flutter Build
-[![Build Status](https://drone.stackweb.net/api/badges/ranapushpender/docker-flutter-build/status.svg)](https://drone.stackweb.net:2053/ranapushpender/docker-flutter-build)
+A docker container containing android and flutter sdk to build apk.
+
+### Build Status
+[View Build status](https://drone.stackweb.net/ranapushpender/docker-flutter-build)
+
 ### Usage
 * Pull the latest docker image using 
 ```

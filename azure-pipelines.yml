@@ -1,0 +1,21 @@
+  
+pool:
+  vmImage: 'ubuntu-18.04'
+
+container:
+  image: docker:dind
+  options:  "--name ci-container -v /usr/bin/docker:/tmp/docker:ro"
+
+steps:
+- script: |
+      /tmp/docker exec -t -u 0 ci-container \
+      sh -c "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confold" -y install sudo"
+- script: ./build_script.sh
+  env:
+    DOCKER_USER: $(DOCKER_USER)
+    DOCKER_PASSWORD: $(DOCKER_PASSWORD)
+    TAG_NAME: $(Build.SourceBranch)
+trigger:
+  tags:
+      include:
+      - v*

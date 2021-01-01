@@ -2,7 +2,7 @@
 A docker container containing android and flutter sdk to build apk.
 
 ### Build Status
-[View Build status](https://drone.stackweb.net/ranapushpender/docker-flutter-build)
+[![Build Status](https://dev.azure.com/ranapushpender/docker-flutter-build/_apis/build/status/ranapushpender.docker-flutter-build?branchName=master)](https://dev.azure.com/ranapushpender/docker-flutter-build/_build/latest?definitionId=4&branchName=master)
 
 ### Usage
 * Pull the latest docker image using 

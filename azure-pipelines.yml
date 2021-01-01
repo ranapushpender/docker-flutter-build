@@ -4,7 +4,7 @@ pool:
 
 container:
   image: docker:dind
-  options:  "--name ci-container -v /usr/bin/docker:/tmp/docker:ro"
+  options:  "--name ci-container -v /usr/bin/docker:/tmp/docker:ro -v /var/run/docker.sock: /var/run/docker.sock"
 
 steps:
 - script: |

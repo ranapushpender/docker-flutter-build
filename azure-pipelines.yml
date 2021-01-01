@@ -3,13 +3,13 @@ pool:
   vmImage: 'ubuntu-18.04'
 
 container:
-  image: docker:dind
+  image: ubuntu:20.04
   options:  "--name ci-container -v /usr/bin/docker:/tmp/docker:ro -v /var/run/docker.sock:/var/run/docker.sock"
 
 steps:
 - script: |
       /tmp/docker exec -t -u 0 ci-container \
-      sh -c "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confold" -y install sudo"
+      sh -c "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confold" -y install sudo && apt-get install docker.io"
 - script: ./build_script.sh
   env:
     DOCKER_USER: $(DOCKER_USER)

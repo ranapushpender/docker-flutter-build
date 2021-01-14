@@ -1,6 +1,5 @@
   
-pool:
-  vmImage: 'ubuntu-18.04'
+pool: Default
 
 container:
   image: ubuntu:20.04
